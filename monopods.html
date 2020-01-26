@@ -52,12 +52,21 @@
     <main>
       <h1 class="page-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
-        <li><a>Главная</a></li>
-        <li><a>Каталог</a></li>
-        <li><a>Моноподы для селфи</a></li>
+        <li><a href="/">Главная</a></li>
+        <li><a href="">Каталог</a></li>
+        <li>Моноподы для селфи</li>
       </ul>
       <div class="category">
         <form class="category-filter">
+          <h2>Фильтр</h2>
+          <fieldset class="category-filter__group">
+            <legend class="category-filter__title">Стоимость</legend>
+            <ul class="category-filter__list">
+              <li class="category-filter__item">
+                <input id="price" type="range" value="500" min="1" max="1000">
+              </li>
+            </ul>
+          </fieldset>
           <fieldset class="category-filter__group">
             <legend class="category-filter__title">Цвет</legend>
             <ul class="category-filter__list">
@@ -105,41 +114,78 @@
           </fieldset>
           <input type="submit" class="button" value="Показать">
         </form>
-        <ul class="category-list">
-          <li class="product-card">
-            <img class="product-card__image" src="https://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
-            <div class="product-card__info">
-              <a href=""><h3 class="product-card__title">Профессиональная селфи-палка</h3></a>
-              <p class="product-card__price">1500 руб.</p>
-              <div class="product-card__buttons">
-                <button class="button button--add-to-comparison">Добавить в сравнение</button>
-                <button class="button button--add-to-cart">Купить</button>
+        <div class="category__inner">
+          <form class="category-sorting">
+            <fieldset class="category-sorting__group">
+              <legend class="category-sorting__title">Сортировка</legend>
+              <ul class="category-sorting__list">
+                <li class="category-sorting__item">
+                  <label>По цене
+                    <input type="radio" checked name="sort">
+                  </label>
+                </li>
+                <li class="category-sorting__item">
+                  <label>По типу
+                    <input type="radio" name="sort">
+                  </label>
+                </li>
+                <li class="category-sorting__item">
+                  <label>По популярности
+                    <input type="radio" name="sort">
+                  </label>
+                </li>
+                <li class="category-sorting__item">
+                  <input type="radio" name="asc">
+                  <input type="radio" checked name="asc">
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+          <ul class="products-list">
+            <li class="product-card">
+              <img class="product-card__image" src="https://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
+              <div class="product-card__info">
+                <a href=""><h3 class="product-card__title">Профессиональная селфи-палка</h3></a>
+                <p class="product-card__price">1500 руб.</p>
+                <div class="product-card__buttons">
+                  <button class="button button--add-to-comparison">Добавить в сравнение</button>
+                  <button class="button button--add-to-cart">Купить</button>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="product-card">
-            <img class="product-card__image" src="https://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
-            <div class="product-card__info">
-              <a href=""><h3 class="product-card__title">Профессиональная селфи-палка</h3></a>
-              <p class="product-card__price">1500 руб.</p>
-              <div class="product-card__buttons">
-                <button class="button button--add-to-comparison">Добавить в сравнение</button>
-                <button class="button button--add-to-cart">Купить</button>
+            </li>
+            <li class="product-card">
+              <img class="product-card__image" src="https://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
+              <div class="product-card__info">
+                <a href=""><h3 class="product-card__title">Профессиональная селфи-палка</h3></a>
+                <p class="product-card__price">1500 руб.</p>
+                <div class="product-card__buttons">
+                  <button class="button button--add-to-comparison">Добавить в сравнение</button>
+                  <button class="button button--add-to-cart">Купить</button>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="product-card">
-            <img class="product-card__image" src="https://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
-            <div class="product-card__info">
-              <a href=""><h3 class="product-card__title">Профессиональная селфи-палка</h3></a>
-              <p class="product-card__price">1500 руб.</p>
-              <div class="product-card__buttons">
-                <button class="button button--add-to-comparison">Добавить в сравнение</button>
-                <button class="button button--add-to-cart">Купить</button>
+            </li>
+            <li class="product-card">
+              <img class="product-card__image" src="https://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
+              <div class="product-card__info">
+                <a href=""><h3 class="product-card__title">Профессиональная селфи-палка</h3></a>
+                <p class="product-card__price">1500 руб.</p>
+                <div class="product-card__buttons">
+                  <button class="button button--add-to-comparison">Добавить в сравнение</button>
+                  <button class="button button--add-to-cart">Купить</button>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+          <form class="category-pagination">
+            <input class="category-pagination__button" type="submit" value="Назад">
+            <ul class="category-pagination-list">
+              <li><input type="submit" value="1"></li>
+              <li><input type="submit" value="2"></li>
+              <li><input type="submit" value="3"></li>
+            </ul>
+            <input class="category-pagination__button" type="submit" value="Вперёд">
+          </form>
+        </div>
       </div>
     </main>
     <footer>
