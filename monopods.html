@@ -121,32 +121,17 @@
         <div class="category__inner">
 
           <!-- Сортировка товаров -->
-          <form class="category-sorting">
-            <fieldset class="category-sorting__group">
-              <legend class="category-sorting__title">Сортировка</legend>
+          <section class="category-sorting">
+              <h2 class="category-sorting__title">Сортировка</h2>
               <ul class="category-sorting__list">
-                <li class="category-sorting__item">
-                  <label>По цене
-                    <input type="radio" checked name="sort">
-                  </label>
-                </li>
-                <li class="category-sorting__item">
-                  <label>По типу
-                    <input type="radio" name="sort">
-                  </label>
-                </li>
-                <li class="category-sorting__item">
-                  <label>По популярности
-                    <input type="radio" name="sort">
-                  </label>
-                </li>
-                <li class="category-sorting__item">
-                  <input type="radio" name="asc">
-                  <input type="radio" checked name="asc">
-                </li>
+                <li class="category-sorting__item"><a href="">По цене</a></li>
+                <li class="category-sorting__item"><a href="">По типу</a></li>
+                <li class="category-sorting__item"><a href="">По популярности</a></li>
+                <li class="category-sorting__item"><a href=""><span class="icon icon-up"></span></a></li>
+                <li class="category-sorting__item"><a href=""><span class="icon icon-down current"></span></a></li>
               </ul>
             </fieldset>
-          </form>
+          </section>
           <!-- -->
 
           <!-- Перечень товаров -->
@@ -187,15 +172,15 @@
           </ul>
 
           <!-- Пагинация -->
-          <form class="category-pagination">
-            <input class="category-pagination__button" type="submit" value="Назад">
+          <section class="category-pagination">
+            <a href="">Назад</a>
             <ul class="category-pagination-list">
-              <li><input type="submit" value="1"></li>
-              <li><input type="submit" value="2"></li>
-              <li><input type="submit" value="3"></li>
+              <li><a href="">1</a></li>
+              <li><a href="">2</a>></li>
+              <li><a href="">3</a></li>
             </ul>
-            <input class="category-pagination__button" type="submit" value="Вперёд">
-          </form>
+            <a href="">Вперёд</a>
+          </section>
           <!-- -->
 
         </div>
