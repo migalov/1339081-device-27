@@ -120,7 +120,7 @@
 
       <!-- Категории товаров -->
       <section class="categories">
-        <h2>Категории</h2>
+        <h2 class="visibility-hidden">Категории</h2>
         <ul class="categories-list">
           <li class="category-item">
             <figure>
@@ -164,7 +164,7 @@
 
       <!-- Преимущества -->
       <section class="features">
-        <h2>Преимущества</h2>
+        <h2 class="visibility-hidden">Преимущества</h2>
         <ul class="features-list">
           <li class="feature-item current">Доставка</li>
           <li class="feature-item">Гарантия</li>
@@ -189,7 +189,7 @@
 
       <!-- Логотипы кампаний -->
       <section class="campaign-logos">
-        <h2>Партнёры</h2>
+        <h2 class="visibility-hidden">Партнёры</h2>
         <ul class="campaign-logos">
           <li><a href=""><img src="img/content/partners/logo-1.jpg" alt="Dji"></a></li>
           <li><a href=""><img src="img/content/partners/logo-2.jpg" alt="SPGadgets"></a></li>
@@ -215,6 +215,40 @@
         <img src="./img/content/map.jpg" alt="Карта проезда">
         <a href="">Напишите нам</a>
       </section>
+
+      <!-- Модальное окно отправки письма -->
+      <form class="base-modal">
+        <button class="base-modal__close"></button>
+        <fieldset>
+          <ul>
+            <li>
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" placeholder="Имя Фамилия">
+              </label>
+            </li>
+            <li>
+              <label for="email">Ваш e-mail</label>
+              <input type="email" id="email" placeholder="email@example.com">
+              </label>
+            </li>
+            <li>
+              <label for="message">Текст письма</label>
+              <textarea id="message" readonly placeholder="В свободной форме"></textarea>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <input type="submit" class="button" value="Отправить">
+      </form>
+      <!-- -->
+
+      <!-- Модальное окно карты проезда -->
+      <form class="base-modal">
+        <button class="base-modal__close"></button>
+        <img src="./img/content/map-big.jpg" alt="Карта проезда">
+      </form>
+      <!-- -->
+
     </main>
     <footer>
       <div class="footer-row">
