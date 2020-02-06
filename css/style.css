@@ -1,0 +1,299 @@
+:root {
+  --color-marzipan: #f7e296;
+  --color-saffron: #f0c52e;
+  --color-mercury: #e5e5e5;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-tundora: #464646;
+  --font-open-sans:  "Open Sans", "Helvetica", "Arial", sans-serif;
+  --font-gilroy: "Gilroy", "Helvetica", "Arial", sans-serif;;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/open-sans-v17-latin_cyrillic-300.eot');
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+  url('../fonts/open-sans-v17-latin_cyrillic-300.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/open-sans-v17-latin_cyrillic-300.woff2') format('woff2'),
+  url('../fonts/open-sans-v17-latin_cyrillic-300.woff') format('woff'),
+  url('../fonts/open-sans-v17-latin_cyrillic-300.ttf') format('truetype'),
+  url('../fonts/open-sans-v17-latin_cyrillic-300.svg#OpenSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Light.eot');
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+  url('../fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gilroy-Light.woff') format('woff'),
+  url('../fonts/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-ExtraBold.eot');
+  src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
+  url('../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
+  url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 300 15px/2 var(--font-open-sans);
+}
+
+a {
+  text-decoration: none
+}
+
+img {
+  max-width: 100%
+}
+
+.visibility-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px
+}
+
+.page-header {
+  background-color: var(--color-marzipan);
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+}
+
+.search input[type="search"] {
+   opacity: 0.3;
+ }
+
+.search input[type="search"]:hover {
+  opacity: 0.6;
+}
+
+.search input[type="search"]:focus {
+  opacity: 1;
+}
+
+.base-navigation,
+.main-menu ul,
+.shop-info ul,
+.category-sorting ul,
+.products-list,
+.footer ul,
+.social-networks {
+  list-style: none;
+}
+
+.base-navigation a,
+.main-menu__list-link,
+.main-menu__sublist-link {
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+
+.category-sorting a,
+.product-card__info a {
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
+.logo:hover,
+.base-navigation a:hover,
+.main-menu__list-link:hover,
+.main-menu__sublist-link:hover,
+.category-sorting a:hover {
+  color: rgba(0, 0, 0, .6);
+}
+
+.logo:active,
+.base-navigation a:active,
+.main-menu__list-link:active,
+.main-menu__sublist-link:active,
+.category-sorting a,
+.breadcrumbs a {
+  color: rgba(0, 0, 0, .3);
+}
+
+.main-menu__sublist a {
+  font-family: var(--font-open-sans);
+}
+
+.main-menu__list-link {
+  font: 800 18px/1.5 var(--font-gilroy);
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  font: 800 18px/1.5 var(--font-gilroy);
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-black);
+  border: none;
+  background-color: transparent;
+}
+
+.home-carousel h2 {
+  font: 800 47px/1.19 var(--font-gilroy);
+  letter-spacing: 0.47px;
+}
+.shop-info {
+  position: relative;
+}
+.shop-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: var(--color-black);
+}
+
+.shop-info h3 {
+  font: 800 47px/1.02 var(--font-gilroy);
+  letter-spacing: 0.47px;
+}
+
+.shop-info li {
+  font: 800 16px/2.5 var(--font-gilroy);
+  letter-spacing: 0.47px;
+  position: relative;
+}
+
+.shop-info li::before {
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: '';
+  width: 4px;
+  height: 4px;
+  border: 2px solid var(--color-mercury);
+  border-radius: 50%;
+}
+
+.page-title {
+  font: 800 47px var(--font-gilroy);
+  letter-spacing: 0.47px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+.category-sorting h2,
+.category-filter h2,
+.category-pagination a {
+  font: 800 16px/1.5 var(--font-gilroy);
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.product-card__title {
+  font: 800 16px/1.33 var(--font-gilroy);
+  letter-spacing: 0.18px;
+  color: var(--color-black);
+}
+
+.button--add-to-comparison {
+  font: 300 13px/2.77 var(--font-open-sans);
+  text-transform: inherit;
+  letter-spacing: 0.13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.button--add-to-comparison::before {
+  content: none;
+}
+
+.product-card__price {
+  font: 300 16px/1.5 var(--font-gilroy);
+  letter-spacing: 0.16px;
+  color: var(--color-tundora);
+}
+
+.category-filter__title {
+  font: 800 18px/1.33  var(--font-gilroy);
+  letter-spacing: 0.18px;
+}
+
+.base-form__label {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.14px;
+}
+
+.category-sorting .current,
+.category-sorting a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.footer {
+  background-color: var(--color-tundora);
+}
+
+.footer a,
+.footer .official-address {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, .6);
+}
+
+.footer a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer a:active {
+  color: rgba(255, 255, 255, .3);
+}
+
+.footer .logo,
+.footer .main-menu__list-link {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer .logo:hover,
+.footer .main-menu__list-link:hover {
+  color: rgba(255, 255, 255, .6);
+}
+
+.footer .logo:active,
+.footer .main-menu__list-link:active {
+  color: rgba(255, 255, 255, .3);
+}
+
+.official-address {
+  font-style: normal;
+}
+
+.modal {
+  display: none;
+}

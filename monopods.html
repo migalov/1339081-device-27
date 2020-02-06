@@ -3,52 +3,52 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Девайс, Каталог товаров</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="logo" href="/">
+      <a class="logo" href="">
         <img src="./img/logos/device.svg" alt="Логотип Device">
       </a>
       <div class="page-header-row">
         <form class="search icon icon--search" action="#">
-          <input class="search__input" type="search" placeholder="Поиск по сайту">
-          <input class="search__submit" type="submit" value="Найти">
+          <input type="search" placeholder="Поиск по сайту">
+          <input type="submit" value="Найти">
         </form>
-        <div class="base-menu">
-          <ul class="base-menu__list">
-            <li class="base-menu__item">
-              <a class="base-menu__item-link icon icon--user" href="">Войти</a>
-            </li>
-            <li class="base-menu__item">
-              <a class="base-menu__item-link icon icon--comparison" href="">Сравнить</a>
-            </li>
-            <li class="base-menu__item">
-              <a class="base-menu__item-link icon icon--cart" href="">Корзина</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="base-navigation">
+          <li>
+            <a class="icon icon--user" href="">Войти</a>
+          </li>
+          <li>
+            <a class="icon icon--comparison" href="">Сравнить</a>
+          </li>
+          <li>
+            <a class="icon icon--cart" href="">Корзина</a>
+          </li>
+        </ul>
       </div>
       <div class="page-header-row">
         <nav class="main-menu">
           <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a class="main-menu__item-link icon icon--plus" href="/catalog.html">Каталог товаров</a>
+            <li>
+              <a class="main-menu__list-link icon icon--plus" href="/catalog.html">Каталог товаров</a>
               <ul class="main-menu__sublist">
-                <li class="main-menu__item"><a class="main-menu__item-link" href="virtual-reality.html">Виртуальная реальность</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="monopods.html">Моноподы для селфи</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="action-camera.html">Экшн-камеры</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="fitness-bracelets.html">Фитнес-браслеты</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="smart-watch.html">Умные часы</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="quadcopters.html">Квадрокоптеры</a></li>
+                <li><a class="main-menu__sublist-link" href="virtual-reality.html">Виртуальная реальность</a></li>
+                <li><a class="main-menu__sublist-link" href="monopods.html">Моноподы для селфи</a></li>
+                <li><a class="main-menu__sublist-link" href="action-camera.html">Экшн-камеры</a></li>
+                <li><a class="main-menu__sublist-link" href="fitness-bracelets.html">Фитнес-браслеты</a></li>
+                <li><a class="main-menu__sublist-link" href="smart-watch.html">Умные часы</a></li>
+                <li><a class="main-menu__sublist-link" href="quadcopters.html">Квадрокоптеры</a></li>
               </ul>
             </li>
-            <li class="main-menu__item"><a class="main-menu__item-link" href="">Доставка</a></li>
-            <li class="main-menu__item"><a class="main-menu__item-link" href="">Гарантия</a></li>
-            <li class="main-menu__item"><a class="main-menu__item-link" href="">Контакты</a></li>
+            <li><a class="main-menu__list-link" href="">Доставка</a></li>
+            <li><a class="main-menu__list-link" href="">Гарантия</a></li>
+            <li><a class="main-menu__list-link" href="">Контакты</a></li>
           </ul>
         </nav>
       </div>
-    </header>
+  </header>
     <main>
       <h1 class="page-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
@@ -122,13 +122,13 @@
 
           <!-- Сортировка товаров -->
           <section class="category-sorting">
-            <h2 class="category-sorting__title">Сортировка</h2>
-            <ul class="category-sorting__list">
-              <li class="category-sorting__item"><a href="">По цене</a></li>
-              <li class="category-sorting__item"><a href="">По типу</a></li>
-              <li class="category-sorting__item"><a href="">По популярности</a></li>
-              <li class="category-sorting__item"><a href="">Отфильтровать список по возрастанию</a></li>
-              <li class="category-sorting__item"><a href="">Отфильтровать список по убыванию</a></li>
+            <h2>Сортировка</h2>
+            <ul>
+              <li><a class="current" href="">По цене</a></li>
+              <li><a href="">По типу</a></li>
+              <li><a href="">По популярности</a></li>
+              <li><a href="">Отфильтровать список по возрастанию</a></li>
+              <li><a href="">Отфильтровать список по убыванию</a></li>
             </ul>
           </section>
           <!-- -->
@@ -136,7 +136,7 @@
           <!-- Перечень товаров -->
           <ul class="products-list">
             <li class="product-card">
-              <img class="product-card__image" src="./img/content/catalog/item-1.jpg" alt="Профессиональная селфи-палка">
+              <img src="./img/content/catalog/item-1.jpg" alt="Профессиональная селфи-палка">
               <div class="product-card__info">
                 <a href=""><h3 class="product-card__title">Любительская селфи-палка</h3></a>
                 <p class="product-card__price">500 руб.</p>
@@ -197,7 +197,7 @@
         </div>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="footer-row">
         <a class="logo" href="/">
           <img src="./img/logos/device-footer.svg" alt="Логотип Device">
@@ -219,9 +219,9 @@
       <div class="footer-row">
         <address class="official-address">г. Москва, ул. Строителей, 15</address>
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="" class="main-menu__item-link main-menu__item-link--white">Доставка</a></li>
-          <li class="main-menu__item"><a href="" class="main-menu__item-link main-menu__item-link--white">Гарантия</a></li>
-          <li class="main-menu__item"><a href="" class="main-menu__item-link main-menu__item-link--white">Контакты</a></li>
+          <li><a class="main-menu__list-link" href="">Доставка</a></li>
+          <li><a class="main-menu__list-link" href="">Гарантия</a></li>
+          <li><a class="main-menu__list-link" href="">Контакты</a></li>
         </ul>
         <a href="tel:+74954959595">+7 (495) 495-95-95</a>
       </div>
@@ -233,23 +233,23 @@
           <li>
             <a href="" aria-label="Facebook">
               <svg width="32" height="32">
-                <path d="M14.81.04l-.8.1a16.05 16.05 0 00-13.9 13.9c-.1 1.3-.1 2.62 0 3.93a16.19 16.19 0 008.55 12.22 15.81 15.81 0 0016.12-.83 16.19 16.19 0 006.9-10.2c.24-1.18.29-1.73.29-3.16 0-1.95-.21-3.29-.79-5.03a15.99 15.99 0 00-3.7-6.08 15.21 15.21 0 00-4.39-3.2A15.86 15.86 0 0018.23.14c-.6-.09-2.96-.17-3.42-.11zm5.43 8.82l.01 1.57-1.14.02c-1.73.03-1.73.04-1.73 1.77v1.1h1.46l1.47.01-.15 1.5c-.06.54-.12 1.08-.16 1.61 0 .12-.06.12-1.31.12h-1.32v9.25H13.5v-9.25h-1.81v-3.25h1.8l.03-1.45c.03-1.65.1-2 .51-2.78a3.37 3.37 0 012.67-1.76c.21-.03 1.1-.05 1.96-.04h1.56l.02 1.58z" fill="#7E7E7E"/>
+                <path d="M14.81.04l-.8.1a16.05 16.05 0 00-13.9 13.9c-.1 1.3-.1 2.62 0 3.93a16.19 16.19 0 008.55 12.22 15.81 15.81 0 0016.12-.83 16.19 16.19 0 006.9-10.2c.24-1.18.29-1.73.29-3.16 0-1.95-.21-3.29-.79-5.03a15.99 15.99 0 00-3.7-6.08 15.21 15.21 0 00-4.39-3.2A15.86 15.86 0 0018.23.14c-.6-.09-2.96-.17-3.42-.11zm5.43 8.82l.01 1.57-1.14.02c-1.73.03-1.73.04-1.73 1.77v1.1h1.46l1.47.01-.15 1.5c-.06.54-.12 1.08-.16 1.61 0 .12-.06.12-1.31.12h-1.32v9.25H13.5v-9.25h-1.81v-3.25h1.8l.03-1.45c.03-1.65.1-2 .51-2.78a3.37 3.37 0 012.67-1.76c.21-.03 1.1-.05 1.96-.04h1.56l.02 1.58z" fill="#b5b5b5"/>
               </svg>
             </a>
           </li>
           <li>
             <a href="" aria-label="Instagram">
               <svg width="32" height="32">
-                <path d="M19.06 16a3.06 3.06 0 11-6.12 0 3.06 3.06 0 016.12 0z" fill="#7E7E7E" />
-                <path d="M23.16 10.58c-.14-.4-.38-.76-.68-1.05-.3-.31-.66-.55-1.06-.7a5.1 5.1 0 00-1.7-.3c-.98-.05-1.27-.06-3.72-.06s-2.74 0-3.71.05c-.9.04-1.38.2-1.7.32-.4.15-.77.38-1.06.69-.31.3-.55.65-.7 1.05-.12.32-.27.81-.3 1.7-.05.98-.06 1.27-.06 3.72s0 2.74.05 3.71c.04.9.2 1.38.32 1.7.14.4.38.77.69 1.07.3.3.65.54 1.05.68.32.13.81.28 1.7.32.98.04 1.27.05 3.72.05s2.74 0 3.71-.05c.9-.04 1.38-.2 1.7-.32a3.04 3.04 0 001.75-1.74c.13-.33.28-.81.32-1.7.04-.98.05-1.27.05-3.72s0-2.74-.05-3.71c-.04-.9-.2-1.38-.32-1.7zM16 20.72a4.72 4.72 0 110-9.44 4.72 4.72 0 010 9.44zm4.9-8.52a1.1 1.1 0 110-2.2 1.1 1.1 0 010 2.2z" fill="#7E7E7E"/>
-                <path d="M16 0a16 16 0 100 32 16 16 0 000-32zm9.13 19.79c-.04.98-.2 1.64-.43 2.23a4.7 4.7 0 01-2.68 2.69c-.59.22-1.25.38-2.23.42-.98.05-1.3.06-3.79.06-2.5 0-2.8-.01-3.79-.06a6.75 6.75 0 01-2.23-.43 4.5 4.5 0 01-1.63-1.05 4.5 4.5 0 01-1.05-1.63 6.74 6.74 0 01-.43-2.23c-.05-.98-.06-1.3-.06-3.79 0-2.5.01-2.8.06-3.79.04-.98.2-1.64.42-2.23a4.5 4.5 0 011.07-1.63A4.5 4.5 0 019.98 7.3a6.75 6.75 0 012.23-.43c.98-.05 1.3-.06 3.79-.06 2.5 0 2.8.01 3.79.06.98.04 1.64.2 2.23.42.61.24 1.17.6 1.63 1.07a4.5 4.5 0 011.05 1.62c.23.59.39 1.25.43 2.23.05.98.06 1.3.06 3.79 0 2.5-.01 2.8-.06 3.79z" fill="#7E7E7E"/>
+                <path d="M19.06 16a3.06 3.06 0 11-6.12 0 3.06 3.06 0 016.12 0z" fill="#b5b5b5" />
+                <path d="M23.16 10.58c-.14-.4-.38-.76-.68-1.05-.3-.31-.66-.55-1.06-.7a5.1 5.1 0 00-1.7-.3c-.98-.05-1.27-.06-3.72-.06s-2.74 0-3.71.05c-.9.04-1.38.2-1.7.32-.4.15-.77.38-1.06.69-.31.3-.55.65-.7 1.05-.12.32-.27.81-.3 1.7-.05.98-.06 1.27-.06 3.72s0 2.74.05 3.71c.04.9.2 1.38.32 1.7.14.4.38.77.69 1.07.3.3.65.54 1.05.68.32.13.81.28 1.7.32.98.04 1.27.05 3.72.05s2.74 0 3.71-.05c.9-.04 1.38-.2 1.7-.32a3.04 3.04 0 001.75-1.74c.13-.33.28-.81.32-1.7.04-.98.05-1.27.05-3.72s0-2.74-.05-3.71c-.04-.9-.2-1.38-.32-1.7zM16 20.72a4.72 4.72 0 110-9.44 4.72 4.72 0 010 9.44zm4.9-8.52a1.1 1.1 0 110-2.2 1.1 1.1 0 010 2.2z" fill="#b5b5b5"/>
+                <path d="M16 0a16 16 0 100 32 16 16 0 000-32zm9.13 19.79c-.04.98-.2 1.64-.43 2.23a4.7 4.7 0 01-2.68 2.69c-.59.22-1.25.38-2.23.42-.98.05-1.3.06-3.79.06-2.5 0-2.8-.01-3.79-.06a6.75 6.75 0 01-2.23-.43 4.5 4.5 0 01-1.63-1.05 4.5 4.5 0 01-1.05-1.63 6.74 6.74 0 01-.43-2.23c-.05-.98-.06-1.3-.06-3.79 0-2.5.01-2.8.06-3.79.04-.98.2-1.64.42-2.23a4.5 4.5 0 011.07-1.63A4.5 4.5 0 019.98 7.3a6.75 6.75 0 012.23-.43c.98-.05 1.3-.06 3.79-.06 2.5 0 2.8.01 3.79.06.98.04 1.64.2 2.23.42.61.24 1.17.6 1.63 1.07a4.5 4.5 0 011.05 1.62c.23.59.39 1.25.43 2.23.05.98.06 1.3.06 3.79 0 2.5-.01 2.8-.06 3.79z" fill="#b5b5b5"/>
               </svg>
             </a>
           </li>
           <li>
             <a href="" aria-label="Twitter">
               <svg width="32" height="32">
-                <path d="M16 0a16 16 0 100 32 16 16 0 000-32zm7.3 12.47l.02.48c0 4.85-3.7 10.45-10.45 10.45-2.08 0-4-.6-5.63-1.65 1.94.22 3.9-.32 5.44-1.52a3.68 3.68 0 01-3.44-2.55c.55.1 1.12.08 1.66-.07a3.67 3.67 0 01-2.94-3.6v-.04c.5.27 1.06.44 1.66.46a3.67 3.67 0 01-1.14-4.9 10.43 10.43 0 007.58 3.83 3.67 3.67 0 016.25-3.35 7.35 7.35 0 002.33-.9 3.69 3.69 0 01-1.6 2.04 7.25 7.25 0 002.1-.58 7.46 7.46 0 01-1.83 1.9z" fill="#7E7E7E"/>
+                <path d="M16 0a16 16 0 100 32 16 16 0 000-32zm7.3 12.47l.02.48c0 4.85-3.7 10.45-10.45 10.45-2.08 0-4-.6-5.63-1.65 1.94.22 3.9-.32 5.44-1.52a3.68 3.68 0 01-3.44-2.55c.55.1 1.12.08 1.66-.07a3.67 3.67 0 01-2.94-3.6v-.04c.5.27 1.06.44 1.66.46a3.67 3.67 0 01-1.14-4.9 10.43 10.43 0 007.58 3.83 3.67 3.67 0 016.25-3.35 7.35 7.35 0 002.33-.9 3.69 3.69 0 01-1.6 2.04 7.25 7.25 0 002.1-.58 7.46 7.46 0 01-1.83 1.9z" fill="#b5b5b5"/>
               </svg>
             </a>
           </li>

@@ -3,48 +3,48 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="logo">
+      <a class="logo" href="">
         <img src="./img/logos/device.svg" alt="Логотип Device">
       </a>
       <div class="page-header-row">
         <form class="search icon icon--search" action="#">
-          <input class="search__input" type="search" placeholder="Поиск по сайту">
-          <input class="search__submit" type="submit" value="Найти">
+          <input type="search" placeholder="Поиск по сайту">
+          <input type="submit" value="Найти">
         </form>
-        <div class="base-menu">
-          <ul class="base-menu__list">
-            <li class="base-menu__item">
-              <a class="base-menu__item-link icon icon--user" href="">Войти</a>
-            </li>
-            <li class="base-menu__item">
-              <a class="base-menu__item-link icon icon--comparison" href="">Сравнить</a>
-            </li>
-            <li class="base-menu__item">
-              <a class="base-menu__item-link icon icon--cart" href="">Корзина</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="base-navigation">
+          <li>
+            <a class="icon icon--user" href="">Войти</a>
+          </li>
+          <li>
+            <a class="icon icon--comparison" href="">Сравнить</a>
+          </li>
+          <li>
+            <a class="icon icon--cart" href="">Корзина</a>
+          </li>
+        </ul>
       </div>
       <div class="page-header-row">
         <nav class="main-menu">
           <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a class="main-menu__item-link icon icon--plus" href="/catalog.html">Каталог товаров</a>
+            <li>
+              <a class="main-menu__list-link icon icon--plus" href="/catalog.html">Каталог товаров</a>
               <ul class="main-menu__sublist">
-                <li class="main-menu__item"><a class="main-menu__item-link" href="virtual-reality.html">Виртуальная реальность</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="monopods.html">Моноподы для селфи</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="action-camera.html">Экшн-камеры</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="fitness-bracelets.html">Фитнес-браслеты</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="smart-watch.html">Умные часы</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link" href="quadcopters.html">Квадрокоптеры</a></li>
+                <li><a class="main-menu__sublist-link" href="virtual-reality.html">Виртуальная реальность</a></li>
+                <li><a class="main-menu__sublist-link" href="monopods.html">Моноподы для селфи</a></li>
+                <li><a class="main-menu__sublist-link" href="action-camera.html">Экшн-камеры</a></li>
+                <li><a class="main-menu__sublist-link" href="fitness-bracelets.html">Фитнес-браслеты</a></li>
+                <li><a class="main-menu__sublist-link" href="smart-watch.html">Умные часы</a></li>
+                <li><a class="main-menu__sublist-link" href="quadcopters.html">Квадрокоптеры</a></li>
               </ul>
             </li>
-            <li class="main-menu__item"><a class="main-menu__item-link" href="">Доставка</a></li>
-            <li class="main-menu__item"><a class="main-menu__item-link" href="">Гарантия</a></li>
-            <li class="main-menu__item"><a class="main-menu__item-link" href="">Контакты</a></li>
+            <li><a class="main-menu__list-link" href="">Доставка</a></li>
+            <li><a class="main-menu__list-link" href="">Гарантия</a></li>
+            <li><a class="main-menu__list-link" href="">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -212,7 +212,7 @@
       <!-- -->
 
       <section class="shop-info">
-        <h3 class="shop-info__title">О нас</h3>
+        <h3>О нас</h3>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
         <ul>
           <li>Деловые Линии</li>
@@ -222,13 +222,13 @@
         <a class="button" href="">Подробнее</a>
       </section>
       <section class="shop-info">
-        <h3 class="shop-info__title">Контакты</h3>
+        <h3>Контакты</h3>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <img src="./img/content/map.jpg" alt="Карта проезда">
         <a href="">Напишите нам</a>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="footer-row">
         <a class="logo">
           <img src="./img/logos/device-footer.svg" alt="Логотип Device">
