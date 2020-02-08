@@ -6,7 +6,7 @@
   --color-white: #fff;
   --color-tundora: #464646;
   --font-open-sans:  "Open Sans", "Helvetica", "Arial", sans-serif;
-  --font-gilroy: "Gilroy", "Helvetica", "Arial", sans-serif;;
+  --font-gilroy: "Gilroy", "Helvetica", "Arial", sans-serif;
 }
 
 @font-face {
@@ -47,7 +47,7 @@
 body {
   margin: 0;
   padding: 0;
-  font: 300 15px/2 var(--font-open-sans);
+  font: 300 15px/2 "Open Sans", "Helvetica", "Arial", sans-serif;
 }
 
 a {
@@ -67,7 +67,7 @@ img {
 }
 
 .page-header {
-  background-color: var(--color-marzipan);
+  background-color: #f7e296;
 }
 
 .search input {
@@ -135,29 +135,30 @@ img {
 }
 
 .main-menu__sublist a {
-  font-family: var(--font-open-sans);
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
 }
 
 .main-menu__list-link {
-  font: 800 18px/1.5 var(--font-gilroy);
+  font: 800 18px/1.5 "Gilroy", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   letter-spacing: 3.6px;
 }
 
 .button {
   display: inline-block;
+  vertical-align: top;
   position: relative;
-  font: 800 18px/1.5 var(--font-gilroy);
+  font: 800 18px/1.5 "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 3.6px;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-black);
+  color: #000;
   border: none;
   background-color: transparent;
 }
 
 .home-carousel h2 {
-  font: 800 47px/1.19 var(--font-gilroy);
+  font: 800 47px/1.19 "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 0.47px;
 }
 .shop-info {
@@ -170,16 +171,16 @@ img {
   left: 0;
   width: 80px;
   height: 7px;
-  background-color: var(--color-black);
+  background-color: #000;
 }
 
 .shop-info h3 {
-  font: 800 47px/1.02 var(--font-gilroy);
+  font: 800 47px/1.02 "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 0.47px;
 }
 
 .shop-info li {
-  font: 800 16px/2.5 var(--font-gilroy);
+  font: 800 16px/2.5 "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 0.47px;
   position: relative;
 }
@@ -192,12 +193,12 @@ img {
   content: '';
   width: 4px;
   height: 4px;
-  border: 2px solid var(--color-mercury);
+  border: 2px solid #e5e5e5;
   border-radius: 50%;
 }
 
 .page-title {
-  font: 800 47px var(--font-gilroy);
+  font: 800 47px "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 0.47px;
 }
 
@@ -208,20 +209,20 @@ img {
 .category-sorting h2,
 .category-filter h2,
 .category-pagination a {
-  font: 800 16px/1.5 var(--font-gilroy);
+  font: 800 16px/1.5 "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 3.2px;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: #000;
 }
 
 .product-card__title {
-  font: 800 16px/1.33 var(--font-gilroy);
+  font: 800 16px/1.33 "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 0.18px;
-  color: var(--color-black);
+  color: #000;
 }
 
 .button--add-to-comparison {
-  font: 300 13px/2.77 var(--font-open-sans);
+  font: 300 13px/2.77 "Open Sans", "Helvetica", "Arial", sans-serif;
   text-transform: inherit;
   letter-spacing: 0.13px;
   color: rgba(0, 0, 0, 0.5);
@@ -232,13 +233,13 @@ img {
 }
 
 .product-card__price {
-  font: 300 16px/1.5 var(--font-gilroy);
+  font: 300 16px/1.5 "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 0.16px;
-  color: var(--color-tundora);
+  color: #464646;
 }
 
 .category-filter__title {
-  font: 800 18px/1.33  var(--font-gilroy);
+  font: 800 18px/1.33  "Gilroy", "Helvetica", "Arial", sans-serif;
   letter-spacing: 0.18px;
 }
 
@@ -246,6 +247,7 @@ img {
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.14px;
+  line-height: 40px;
 }
 
 .category-sorting .current,
@@ -254,17 +256,17 @@ img {
 }
 
 .footer {
-  background-color: var(--color-tundora);
+  background-color: #464646;
 }
 
 .footer a,
 .footer .official-address {
-  color: var(--color-white);
+  color: #fff;
   text-decoration: none;
 }
 
 .footer a {
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .7);
 }
 
 .footer a:hover {
@@ -292,6 +294,18 @@ img {
 
 .official-address {
   font-style: normal;
+}
+
+.social-networks a {
+  opacity: .3;
+}
+
+.social-networks a:hover {
+  opacity: .6;
+}
+
+.social-networks a:active {
+  opacity: .1;
 }
 
 .modal {
