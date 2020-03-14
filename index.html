@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
   </head>
   <body class="main-page">
     <header class="header">
@@ -15,7 +15,7 @@
         <form class="search" action="https://echo.htmlacademy.ru" method="get" name="search-data">
           <label class="visibility-hidden" for="search">Поиск по сайту</label>
           <input class="search__query" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
-          <button class="search__submit" type="submit"><span class="btnfix">Найти</span></button>
+          <button class="search__submit" type="submit">Найти</button>
         </form>
         <ul class="base-menu">
           <li>
@@ -52,8 +52,11 @@
     </header>
     <main>
       <div class="home-slider">
+        <input class="visibility-hidden" type="radio" name="promo-slides" value="promo-slide-1" id="promo-slide-1" checked>
+        <input class="visibility-hidden" type="radio" name="promo-slides" value="promo-slide-2" id="promo-slide-2">
+        <input class="visibility-hidden" type="radio" name="promo-slides" value="promo-slide-3" id="promo-slide-3">
         <ul class="home-slider-list">
-          <li class="current" data-number="01">
+          <li class="home-slider-item" data-number="01">
             <img src="./img/content/slider/1.png" alt="Селфи-палка" width="384" height="486">
             <div class="home-slider__promo-text">
               <h2>Делай селфи,<br>как Бен Стиллер!</h2>
@@ -75,7 +78,7 @@
               </table>
             </div>
           </li>
-          <li data-number="02">
+          <li class="home-slider-item" data-number="02">
             <img src="./img/content/slider/2.png" alt="Фитнес-браслет" width="345" height="485">
             <div class="home-slider__promo-text">
               <h2>Худеем<br>правильно</h2>
@@ -93,11 +96,11 @@
               </table>
             </div>
           </li>
-          <li data-number="03">
-            <img src="./img/content/slider/3.png" alt="Квадрокоптер"width="526" height="334">
+          <li class="home-slider-item" data-number="03">
+            <img src="./img/content/slider/3.png" alt="Квадрокоптер" width="526" height="334">
             <div class="home-slider__promo-text">
               <h2>Порхает как бабочка, жалит как пчела!</h2>
-              <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замаскированным под стандартную камеру.</p>
               <a class="home-slider__button button" href="">Подробнее</a>
               <table class="home-slider__specs">
                 <tbody>
@@ -115,16 +118,22 @@
           </li>
         </ul>
         <ul class="home-slider-pagination">
-          <li class="current"></li>
-          <li></li>
-          <li></li>
+          <li>
+            <label class="promo-control-label" for="promo-slide-1" aria-label="Первый слайд"></label>
+          </li>
+          <li>
+            <label class="promo-control-label" for="promo-slide-2" aria-label="Вторий слайд"></label>
+          </li>
+          <li>
+            <label class="promo-control-label" for="promo-slide-3" aria-label="Третий слайд"></label>
+          </li>
         </ul>
       </div>
       <section class="popular-categories">
         <h2 class="visibility-hidden">Категории</h2>
         <ul>
           <li class="popular-categories__item">
-            <a href="">Виртуальная<br>реальность</a>
+            <a href="">Виртуальная реальность</a>
           </li>
           <li class="popular-categories__item">
             <a href="">Моноподы<br>для селфи</a>
@@ -180,32 +189,34 @@
       <section class="campaign-logos">
         <h2 class="visibility-hidden">Партнёры</h2>
         <ul class="campaign-logos-list">
-          <li><a href=""><img src="img/content/partners/logo-1-color.png" alt="Dji"></a></li>
-          <li><a href=""><img src="img/content/partners/logo-2-color.png" alt="SPGadgets"></a></li>
-          <li><a href=""><img src="img/content/partners/logo-3-color.png" alt="GoPro"></a></li>
-          <li><a href=""><img src="img/content/partners/logo-4-color.png" alt="Vive"></a></li>
+          <li><a href=""><img src="img/content/partners/logo-1.png" alt="Dji"></a></li>
+          <li><a href=""><img src="img/content/partners/logo-2.png" alt="SPGadgets"></a></li>
+          <li><a href=""><img src="img/content/partners/logo-3.png" alt="GoPro"></a></li>
+          <li><a href=""><img src="img/content/partners/logo-4.png" alt="Vive"></a></li>
         </ul>
       </section>
-      <div class="shop-info container">
-        <section class="shop-info-section">
+      <section class="shop-info container">
+        <h2 class="visibility-hidden">Справочная информация</h2>
+        <div class="shop-info-section">
           <h3>О нас</h3>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.<br><br>Мы можем доставить ваш товар в самые отдаленные<br>точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
           <ul>
             <li>Деловые Линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
           <a class="shop-info__button--more button" href="">Подробнее о нас</a>
-        </section>
-        <section class="shop-info-section">
+        </div>
+        <div class="shop-info-section">
           <h3>Контакты</h3>
-          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
-          <div data-modal-open="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1887.9588837253198!2d37.63599182390289!3d55.755477134885595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e4bc44e814402ad!2z0J_QsNGA0LogItCT0L7RgNC60LAi!5e0!3m2!1sru!2sru!4v1582426931081!5m2!1sru!2sru" width="100%" height="222" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-          </div>
-          <a class="shop-info__button--contact-us button" href="">Напишите нам</a>
-        </section>
-      </div>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <a href="map.html" class="map-link" data-modal-open="map" tabindex="0">
+            <img src="./img/content/map.jpg" alt="" width="560" height="222">
+          </a>
+          <a data-modal-open="feedback" class="shop-info__button--contact-us button" href="feedback.html">Напишите нам</a>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer-row">
@@ -214,13 +225,13 @@
         </a>
         <ul class="footer-base-menu">
           <li>
-            <a href=""><svg width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>Войти</a>
+            <a href="" class="footer-base-menu-link icon icon--user icon--user-footer">Войти</a>
           </li>
           <li>
-            <a href=""><svg width="10" height="10" viewBox="0 0 10 10"><path fill="#ffc600" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>Сравнить</a>
+            <a href="" class="footer-base-menu-link icon icon--compare icon--compare-footer">Сравнить</a>
           </li>
           <li>
-            <a href=""><svg width="12" height="12" viewBox="0 0 12 12"><path fill="#ffc600" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path fill="#ffc600" d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>Корзина</a>
+            <a href="" class="footer-base-menu-link icon icon--cart icon--cart-footer">Корзина</a>
           </li>
         </ul>
       </div>
@@ -264,33 +275,35 @@
         </a>
       </div>
     </footer>
-    <section class="modal modal-send-message">
-      <h2 class="visibility-hidden">Отправить сообщение</h2>
-      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+    <section class="modal modal-feedback" data-modal="feedback">
+      <h2 class="visibility-hidden">Форма обратной связи</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post" name="feedback-data">
         <fieldset>
           <ul>
             <li>
-              <label for="user-name">Ваше имя</label>
-              <input name="name" type="text" id="user-name" placeholder="Имя Фамилия">
+              <label class="feedback-item-title" for="fullname">Ваше имя:</label>
+              <input class="feedback-field feedback-fullname" type="text" name="fullname" id="fullname" placeholder="Имя Фамилия">
             </li>
             <li>
-              <label for="user-email">Ваш e-mail</label>
-              <input name="email" type="email" id="user-email" placeholder="email@example.com">
+              <label class="feedback-item-title" for="email">Ваш e-mail:</label>
+              <input class="feedback-field feedback-email" type="email" name="email" id="email" placeholder="email@example.com">
             </li>
             <li>
-              <label for="user-message">Текст письма</label>
-              <textarea name="message" id="user-message" placeholder="В свободной форме"></textarea>
+              <label for="message">Текст письма:</label>
+              <textarea class="feedback-field feedback-textarea" name="message" id="message" placeholder="В свободной форме"></textarea>
             </li>
           </ul>
         </fieldset>
-        <input class="button" type="submit" value="Отправить">
+        <button class="button follow-btn feedback-btn" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button data-modal-close="feedback" class="modal-close-button" type="button" aria-label="Закрыть"></button>
     </section>
-    <section class="modal modal-map">
-      <h2 class="visibility-hidden">Карта проезда</h2>
-      <img src="./img/content/map-big.jpg" alt="Карта проезда">
-      <button class="modal-close" type="button">Закрыть</button>
+    <section class="modal modal-map" data-modal="map">
+      <h2 class="visibility-hidden">Как до нас добраться</h2>
+      <iframe class="modal-map-source" tabindex="-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473113!2d37.52742931534853!3d55.68703400453078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1531330669406" width="960" height="559" allowfullscreen=""></iframe>
+      <img class="modal-map-image" src="./img/content/map-big.jpg" width="960" height="559" alt="Офис компании по адресу: г. Москва, улица Строителей, 15">
+      <button data-modal-close="map" class="modal-close-button" type="button" aria-label="Закрыть"></button>
     </section>
+    <script src="./js/script.min.js"></script>
   </body>
 </html>
