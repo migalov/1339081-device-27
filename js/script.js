@@ -1,16 +1,18 @@
 let buttonsOpenModals = document.querySelectorAll('[data-modal-open]'),
     buttonsCloseModals = document.querySelectorAll('[data-modal-close]'),
-    formFeedback = document.querySelector(`[data-modal=feedback]`),
-    formFeedbackName = formFeedback.querySelector(`[name=fullname]`),
-    formFeedbackEmail = formFeedback.querySelector(`[name=email]`),
-    formFeedbackEMessage = formFeedback.querySelector(`[name=message]`);
+    formFeedback = document.querySelector('[data-modal=feedback]'),
+    formFeedbackName = formFeedback.querySelector('[name=fullname]'),
+    formFeedbackEmail = formFeedback.querySelector('[name=email]'),
+    formFeedbackEMessage = formFeedback.querySelector('[name=message]');
+
+window.NodeList && !NodeList.prototype.forEach ? NodeList.prototype.forEach = Array.prototype.forEach : "";
 
 buttonsOpenModals.forEach((item) => {
   item.addEventListener("click", (evt) => {
     evt.preventDefault();
     let el = evt.target.tagName == "A" ? evt.target : evt.target.parentNode;
     let nameForm = el.getAttribute('data-modal-open'),
-        modalWindow = document.querySelector(`[data-modal=${nameForm}]`);
+        modalWindow = document.querySelector('[data-modal='.concat(nameForm, ']'));
     modalWindow.classList.add('modal-show');
   });
 });
@@ -26,7 +28,7 @@ buttonsCloseModals.forEach((item) => {
     evt.preventDefault();
     let el = evt.target;
     let nameForm = el.getAttribute('data-modal-close'),
-        modalWindow = document.querySelector(`[data-modal=${nameForm}]`);
+      modalWindow = document.querySelector('[data-modal='.concat(nameForm, ']'));
     modalWindow.classList.remove('modal-show');
     removeClass(modalWindow, 'modal-error');
   });
